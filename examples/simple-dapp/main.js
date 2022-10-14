@@ -1,3 +1,12 @@
+// connect to provider when user clicks 'connect' button
+connectButton.onclick = function() {
+  main();
+}
+
+// if you want the page to connect on page load automatically without having to press the 'connect' button, move the "main()" function outside of the onclick function above.
+
+
+// everything that happens on the page happens in the main() function
 async function main() {
 
   // check website compatibility
@@ -55,13 +64,17 @@ async function main() {
 
   //-----------ADD YOUR CODE BELOW THIS LINE------------//
 
-  ///// THINGS THAT HAPPEN WHEN THE PAGE LOADS
+
+  ///////////// THINGS THAT HAPPEN WHEN CONNECTION IS ESTABLISHED ////////////
 
   displayCurrentNumber();
   signerDisplay.textContent = await signer.getAddress();
 
 
-  //////////////////////////// EVENT LISTENERS
+
+
+
+  //////////// EVENT LISTENERS ////////////////
 
   // contract event: emits when NumIncreased is called
   contract.on("NumIncreased", (message, newNumber) => {
@@ -73,8 +86,11 @@ async function main() {
     contractWithSigner.increaseNum();
   })
 
+
+
+
   
-  //////////////////////////// FUNCTIONS
+  ////////////// FUNCTIONS ///////////////////
 
   async function displayCurrentNumber() {
     let numFromContract = await contract.getNum();
@@ -82,18 +98,3 @@ async function main() {
   }
 
 }
-
-main();
-
-// if the user clicks the connect button
-connectButton.onclick = function() {
-  main();
-}
-
-
-
-
-
-
-
-

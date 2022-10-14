@@ -16,21 +16,23 @@
 </head>
 
 <body>
-  <h1>Simple dApp</h1>
-
-  <p>Pay a small transaction fee</p>
+  <header>
+    <h1>Simple dApp</h1>
+    <p><strong>Description:</strong> Pay a small transaction fee to increase a number stored in a smart contract.</p>
+  </header>
+  
   <hr>
 
-  <button id="connectButton">Connect Wallet</button>
-  
-  <br>
-  <br>
+  <main>
+    <button id="connectButton">Connect</button>
+    <p>Please connect to interact with this dApp</p>
 
-  <p><b>Signer:</b> <span id="signerDisplay"></span></p>
-  <p><b>Current Number:</b> <span id="currentNum"></span></p>
+    <br>
 
-
-  <button id="increaseNumButton">Increase Num</button>
+    <p><b>Signer:</b> <span id="signerDisplay"></span></p>
+    <p><b>Current Number:</b> <span id="currentNum"></span></p>
+    <button id="increaseNumButton">Increase Number</button>
+  </main>
 </body>
 
 </html>

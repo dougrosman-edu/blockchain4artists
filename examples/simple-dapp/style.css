@@ -6,7 +6,15 @@ body {
   font-family: Arial, sans-serif;
 }
 
+hr {
+  margin-bottom: 2rem;
+}
+
 button {
   padding: 1em;
   font-size: 1.25rem;
+}
+
+#currentNum {
+  color: green;
 }
