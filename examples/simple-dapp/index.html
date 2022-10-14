@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="lib/ethers-5.6.umd.min.js"></script>
+
+  <script src="abi.js" defer></script>
+  <script src="main.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Simple dApp</title>
+</head>
+
+<body>
+  <h1>Simple dApp</h1>
+
+  <p>Pay a small transaction fee</p>
+  <hr>
+
+  <button id="connectButton">Connect Wallet</button>
+  
+  <br>
+  <br>
+
+  <p><b>Signer:</b> <span id="signerDisplay"></span></p>
+  <p><b>Current Number:</b> <span id="currentNum"></span></p>
+
+
+  <button id="increaseNumButton">Increase Num</button>
+</body>
+
+</html>

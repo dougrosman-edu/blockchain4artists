@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 1em;
+  font-size: 1.25rem;
+}
