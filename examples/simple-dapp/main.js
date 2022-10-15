@@ -21,7 +21,7 @@ async function main() {
     return;
   }
 
-  // connect to Web3 provider
+  // connect to Web3 provider (MetaMask in most cases)
   const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
 
   // check if user is signed in to correct network (Goerli)
@@ -34,12 +34,12 @@ async function main() {
   // request to connect current wallet to website
   await provider.send("eth_requestAccounts", []);
 
-  // store the signer (whoever is signed in) in a variable
+  // store the signer (whoever is signed in to MetaMask) in a variable
   const signer = provider.getSigner();
   const contract = new ethers.Contract(contractAddress, contractABI, provider);
   const contractWithSigner = contract.connect(signer);
 
-  // if network changes (e.g. mainnet to goerli, refresh page)
+  // if network changes (e.g. switching from mainnet to goerli, refresh the page)
   provider.on("network", (newNetwork, oldNetwork) => {
     if (oldNetwork) {
         window.location.reload();
@@ -87,7 +87,6 @@ async function main() {
   })
 
 
-  
   ////////////// FUNCTIONS ///////////////////
 
   async function displayCurrentNumberFromContract() {
