@@ -22,6 +22,13 @@ var contractABI = [
 	},
 	{
 		"inputs": [],
+		"name": "increaseNum",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "getNum",
 		"outputs": [
 			{
@@ -31,13 +38,6 @@ var contractABI = [
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "increaseNum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
