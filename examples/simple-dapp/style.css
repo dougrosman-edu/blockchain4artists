@@ -11,11 +11,6 @@ hr {
 }
 
 button {
-  padding: 1em;
-  font-size: 1.25rem;
-}
-
-#currentNum {
-  color: green;
-  font-size: 2rem;
+  padding: .5em;
+  font-size: 1.125rem;
 }

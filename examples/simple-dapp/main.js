@@ -1,17 +1,16 @@
-// connect to provider when user clicks 'connect' button
+// connect to provider when user clicks button with id "connectButton"
+
+// if you want the page to connect on page load automatically without having to press the 'connect' button, move the "main()" function outside of the onclick function below.
 connectButton.onclick = function() {
   main();
 }
-
-// if you want the page to connect on page load automatically without having to press the 'connect' button, move the "main()" function outside of the onclick function above.
 
 
 // everything that happens on the page happens in the main() function
 async function main() {
 
   // check website compatibility
-  let userAgentString = navigator.userAgent;
-  if(userAgentString.indexOf("Safari") > -1) {
+  if(navigator.userAgent.indexOf("Safari") > -1) {
     alert("Please switch to a browser that supports Web3 (Chrome, Firefox, Brave, Edge, or Opera)")
     return;
   }
@@ -56,10 +55,6 @@ async function main() {
   * 
   * 
   * 
-  * 
-  * 
-  * 
-  * 
   */
 
   //-----------ADD YOUR CODE BELOW THIS LINE------------//
@@ -67,34 +62,40 @@ async function main() {
 
   ///////////// THINGS THAT HAPPEN WHEN CONNECTION IS ESTABLISHED ////////////
 
-  displayCurrentNumber();
+  // display the current number stored in the contract
+  displayCurrentNumberFromContract();
+
+  // display the address of the signed in wallet
   signerDisplay.textContent = await signer.getAddress();
-
-
 
 
 
   //////////// EVENT LISTENERS ////////////////
 
-  // contract event: emits when NumIncreased is called
-  contract.on("NumIncreased", (message, newNumber) => {
-    currentNum.textContent = +newNumber;
+  // contract event: emits when NumIncreasedEvent is emitted by contract
+  contract.on("NumIncreasedEvent", (message, newNumber) => {
+
+    // update the text of the span with id "currentNumberDisplay" to the new number
+    currentNumberDisplay.textContent = newNumber;
   });
 
-  // click button to increase num 
+  // click event: click the button with id 'increaseNumButton' to increase num 
   increaseNumButton.addEventListener('click', function() {
+    
+    // call the 'increaseNum()' function in the contract
     contractWithSigner.increaseNum();
   })
-
-
 
 
   
   ////////////// FUNCTIONS ///////////////////
 
-  async function displayCurrentNumber() {
-    let numFromContract = await contract.getNum();
-    currentNum.textContent = +numFromContract;
-  }
+  async function displayCurrentNumberFromContract() {
 
+    // read the number stored in the contract using the 'getNum()' function in the contract
+    const numberFromContract = await contract.getNum();
+
+    // sets the text of the span with id "currentNumberDisplay" to the number
+    currentNumberDisplay.textContent = numberFromContract;
+  }
 }

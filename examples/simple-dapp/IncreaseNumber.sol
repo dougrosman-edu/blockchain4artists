@@ -1,3 +1,12 @@
+/*
+Contract: IncreaseNumber
+Author: Doug Rosman
+
+This contract stores a number, and allows anyone to increase
+that number
+
+*/
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
@@ -7,16 +16,17 @@ contract IncreaseNumber {
   uint public num;
 
   // an event that stores a string and a uint
-  event NumIncreased(string message, uint newNumber);
+  event NumIncreasedEvent(string message, uint newNumber);
 
   // function to increase num by 1
   function increaseNum() public {
 
+    // num++ is the shorthand version of 'num = num + 1'
     num++;
 
-    // when num is increased, emit the 'NumIncreased' event with
-    // the message "Number was increased", as well as the number
-    emit NumIncreased("Number was increased", num);
+    // when num is increased, emit 'NumIncreasedEvent' with the
+    // message "Number was increased", as well as the updated number
+    emit NumIncreasedEvent("Number was increased", num);
   }
 
   // function to view the number stored in the contract

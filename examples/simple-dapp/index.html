@@ -6,33 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Import the ethers.js library -->
   <script src="lib/ethers-5.6.umd.min.js"></script>
 
+  <!-- Import the Contract Address and Contract ABI -->
   <script src="abi.js" defer></script>
+
+  <!-- Import our JavaScript code -->
   <script src="main.js" defer></script>
 
+  <!-- Import our stylesheet -->
   <link rel="stylesheet" href="style.css">
   <title>Simple dApp</title>
 </head>
 
 <body>
-  <header>
-    <h1>Simple dApp</h1>
-    <p><strong>Description:</strong> Pay a small transaction fee to increase a number stored in a smart contract.</p>
-  </header>
-  
+  <h1>Simple dApp</h1>
+  <p><strong>Description:</strong> Pay a small transaction fee to increase a number stored in a smart contract. This contract was deployed on the Goerli Ethereum test network.</p>
   <hr>
 
-  <main>
-    <button id="connectButton">Connect</button>
-    <p>Please connect to interact with this dApp</p>
+  <!-- Website begins here -->
 
-    <br>
+  <button id="connectButton">Connect</button>
+  <p>Please connect to interact with this dApp</p>
 
-    <p><b>Signer:</b> <span id="signerDisplay"></span></p>
-    <p><b>Current Number:</b> <span id="currentNum"></span></p>
-    <button id="increaseNumButton">Increase Number</button>
-  </main>
+  <br>
+
+  <p><b>Signer:</b> <span id="signerDisplay">[no wallet connected]</span></p>
+
+  <p><b>Current Number:</b> <span id="currentNumberDisplay">[connect to view]</span></p>
+
+  <button id="increaseNumButton">Increase Number</button>
 </body>
 
 </html>

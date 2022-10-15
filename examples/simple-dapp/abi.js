@@ -1,4 +1,4 @@
-var contractAddress = "0xF03A75fb74aEa7a1e537a9d53C3C8f309c4D18EF";
+var contractAddress = "0xbA447E9FB7Db81514e4fe638eA35efFAAa5a4741";
 
 var contractABI = [
 	{
@@ -17,15 +17,8 @@ var contractABI = [
 				"type": "uint256"
 			}
 		],
-		"name": "NumIncreased",
+		"name": "NumIncreasedEvent",
 		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "increaseNum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"inputs": [],
@@ -38,6 +31,13 @@ var contractABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "increaseNum",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
