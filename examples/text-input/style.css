@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 80ch;
+}
+
+hr {
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: .5em;
+  font-size: 1.125rem;
+}
