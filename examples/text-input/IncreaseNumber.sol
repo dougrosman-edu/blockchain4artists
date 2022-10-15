@@ -1,16 +1,7 @@
-/*
-Contract: IncreaseNumber
-Author: Doug Rosman
-
-This contract stores a number, and allows anyone to increase
-that number
-
-*/
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-contract IncreaseNumber {
+contract TextInput {
 
   // a number stored permanently in the contract
   uint public num;

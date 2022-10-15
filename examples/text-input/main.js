@@ -1,12 +1,7 @@
-// connect to provider when user clicks button with id "connectButton"
-
-// if you want the page to connect on page load automatically without having to press the 'connect' button, move the "main()" function outside of the onclick function below.
 connectButton.onclick = function() {
   main();
 }
 
-
-// everything that happens on the page happens in the main() function
 async function main() {
 
   // check website compatibility
