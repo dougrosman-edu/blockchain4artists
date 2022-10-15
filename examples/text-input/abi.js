@@ -1,4 +1,4 @@
-var contractAddress = "0x6c6Ea96A087D9E6CFfe8718c2c3377c53eDBaDA6";
+var contractAddress = "0xEb1C1f67b207726E428030497e30F310722E572b";
 
 var contractABI = [
 	{
@@ -12,42 +12,48 @@ var contractABI = [
 			},
 			{
 				"indexed": false,
-				"internalType": "uint256",
-				"name": "newNumber",
-				"type": "uint256"
+				"internalType": "string",
+				"name": "newText",
+				"type": "string"
 			}
 		],
-		"name": "NumIncreasedEvent",
+		"name": "TextSetEvent",
 		"type": "event"
 	},
 	{
 		"inputs": [],
-		"name": "increaseNum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getNum",
+		"name": "getText",
 		"outputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "string",
 				"name": "",
-				"type": "uint256"
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_text",
+				"type": "string"
+			}
+		],
+		"name": "setText",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
-		"name": "num",
+		"name": "text",
 		"outputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "string",
 				"name": "",
-				"type": "uint256"
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",

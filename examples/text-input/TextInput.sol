@@ -3,16 +3,16 @@ pragma solidity ^0.8.4;
 
 contract TextInput {
 
-  string public word;
+  string public text;
 
-  event WordSetEvent(string message, string newWord);
+  event TextSetEvent(string message, string newText);
 
-  function setWord(string memory _word) public {
-    word = _word;
-    emit WordSetEvent("A new word was set.", word);
+  function setText(string memory _text) public {
+    text = _text;
+    emit TextSetEvent("A new text was set.", text);
   }
 
-  function getWord() public view returns (string memory) {
-    return word;
+  function getText() public view returns (string memory) {
+    return text;
   }
 }

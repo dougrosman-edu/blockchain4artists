@@ -33,22 +33,22 @@ async function main() {
 
 
   // CODE THAT EXECUTES AFTER CONNECTING
-  displayCurrentNumberFromContract();
-  signerDisplay.textContent = await signer.getAddress();
+  displayText();
 
   // EVENT LISTENERS
-  contract.on("NumIncreasedEvent", (message, newNumber) => {
-    currentNumberDisplay.textContent = newNumber;
+  contract.on("TextSetEvent", (message, newText) => {
+    textDisplay.textContent = newText;
   });
  
-  increaseNumButton.addEventListener('click', function() {
-    contractWithSigner.increaseNum();
-  })
+  textInputButton.onclick = setText;
 
   // FUNCTIONS
-  async function displayCurrentNumberFromContract() {
+  async function displayText() {
+    textDisplay.textContent = await contract.getText();;
+  }
 
-    const numberFromContract = await contract.getNum();
-    currentNumberDisplay.textContent = numberFromContract;
+  function setText() {
+    const newText = textInput.value;
+    contractWithSigner.setText(newText);
   }
 }
