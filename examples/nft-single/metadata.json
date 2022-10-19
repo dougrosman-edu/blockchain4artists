@@ -1,5 +1,1 @@
-{
-  "description": "A wormy blob image made using p5.js.", 
-  "image": "https://raw.githubusercontent.com/dougrosman-edu/blockchain4artists/main/examples/nft-single/assets/blob-small.png", 
-  "name": "Test Blob"
-}
+{"description": "A wormy blob image made using p5.js.","image": "https://raw.githubusercontent.com/dougrosman-edu/blockchain4artists/main/examples/nft-single/assets/blob-small.png","name": "Test Blob"}
