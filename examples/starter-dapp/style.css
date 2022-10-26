@@ -7,6 +7,10 @@ body {
   max-width: 80ch;
 }
 
+p {
+  line-height: 1.4;
+}
+
 hr {
   margin-bottom: 2rem;
 }
@@ -14,4 +18,24 @@ hr {
 button {
   padding: .5em;
   font-size: 1.125rem;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-icon {
+  display: none;
+  padding: .5rem;
+  border: .325rem solid gray;
+  border-top: .325rem solid lightblue;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {transform: rotate(360deg);}
 }

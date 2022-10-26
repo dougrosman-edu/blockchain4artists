@@ -28,16 +28,30 @@
 
   <!-- Website begins here -->
 
-  <button id="connectButton">Connect</button>
-  <p>Please connect to interact with this dApp</p>
+  <div class="button-container">
+    <button id="connectButton">Connect</button>
+    <span id="loadingIconConnect" class="loading-icon"></span>
+  </div>
+  
+  <p>
+    <strong>Connection Status:</strong> <span id="connectionStatus">🔴 Not connected</span>
+  </p>
+  <p>
+    <strong>Connected Wallet:</strong> <span id="connectedWallet">[No wallet connected]</span>
+  </p>
+  <p>
+    <strong>Goerli Balance: </strong> <span id="goerliBalance"></span>
+  </p>
 
   <br>
 
-  <p><b>Signer:</b> <span id="signerDisplay">[no wallet connected]</span></p>
+  <p><strong>Current Number:</strong> <span id="currentNumberDisplay">[connect to view]</span></p>
 
-  <p><b>Current Number:</b> <span id="currentNumberDisplay">[connect to view]</span></p>
-
-  <button id="increaseNumButton">Increase Number</button>
+  <div class="button-container">
+    <button id="increaseNumButton">Increase Number</button>
+    <span id="loadingIconIncreaseNum" class="loading-icon"></span>
+  </div>
+  
 </body>
 
 </html>
