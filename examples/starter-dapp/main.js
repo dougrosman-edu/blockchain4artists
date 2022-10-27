@@ -1,6 +1,6 @@
 // set to 'true' to automatically connect to Web3 Provider on page load
 // set to 'false' to enable "click to connect" button
-const CONNECT_AUTOMATICALLY = false;
+const CONNECT_AUTOMATICALLY = true;
 
 if(CONNECT_AUTOMATICALLY) {
   connectButton.setAttribute("disabled", "true");
@@ -9,8 +9,9 @@ if(CONNECT_AUTOMATICALLY) {
   connectButton.onclick = main;
 }
 
+///// MAIN()
 
-// Everything that happens on the page happens in the main() function. Any code that interacts with a blockchain should be written in main()
+// Everything that happens on the page happens in the main() function
 async function main() {
   loadingIconConnect.style.display = "block";
 
@@ -119,7 +120,7 @@ async function main() {
     currentNumberDisplay.textContent = newNumber;
   });
 
-  // click event: click the button with id 'increaseNumButton' to increase num 
+  // click the button with id 'increaseNumButton' to increase num 
   increaseNumButton.addEventListener('click', async function() {
     
     console.log("Initiating transaction...");
